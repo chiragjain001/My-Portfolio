@@ -54,7 +54,7 @@ const Hero = () => {
       <ParallaxBackground />
 
       <figure
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none md:pointer-events-auto"
         style={{ width: '100%', height: '100%' }}
         aria-label="3D astronaut scene"
       >

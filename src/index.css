@@ -63,19 +63,17 @@ html {
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 body {
   background: #030412;
   font-family: "Funnel Display", sans-serif;
   color: white;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overscroll-behavior-y: none;
 }
 
 /* Phase 5: hide native cursor on pointer devices (CustomCursor.jsx renders custom one) */
