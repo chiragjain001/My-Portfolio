@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ── Favicon ──────────────────────────────────────────────────────── -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- ── Primary Meta ─────────────────────────────────────────────────── -->
+    <title>Chirag Jain | Full-Stack & 3D Web Developer</title>
+    <meta name="description"
+      content="Portfolio of Chirag Jain – Full-Stack developer specialising in React, Three.js, WebGL, and .NET. Crafting modern, immersive web experiences." />
+    <meta name="keywords"
+      content="Chirag Jain, Full Stack Developer, React, Three.js, WebGL, .NET, Portfolio" />
+    <meta name="author" content="Chirag Jain" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- ── Open Graph / Twitter ──────────────────────────────────────────── -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://chiragjain.dev/" />
+    <meta property="og:title"       content="Chirag Jain | Full-Stack & 3D Web Developer" />
+    <meta property="og:description"
+      content="Immersive 3D portfolio showcasing full-stack projects built with React, Three.js, and WebGL." />
+    <meta property="og:image"       content="/assets/og-image.jpg" />
+    <meta name="twitter:card"       content="summary_large_image" />
+    <meta name="twitter:title"      content="Chirag Jain | Full-Stack & 3D Web Developer" />
+    <meta name="twitter:description"
+      content="Immersive 3D portfolio showcasing full-stack projects built with React, Three.js, and WebGL." />
+
+    <!-- ── Theme Color (PWA + mobile browser chrome) ─────────────────────── -->
+    <meta name="theme-color" content="#030412" />
+    <meta name="msapplication-TileColor" content="#030412" />
+
+    <!-- ── Phase 3: Critical Font Preload ───────────────────────────────── -->
+    <!-- Preconnect so the browser opens the TCP connection immediately -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Actual stylesheet (non-blocking display=swap) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap"
+    />
+
+    <!-- ── Phase 3: Critical Asset Preloads ─────────────────────────────── -->
+    <!--
+      Preload the HDR environment map so the UFO 3D scene doesn't stall waiting
+      for it. 'as=fetch' + crossorigin are required for non-script/style fetches.
+    -->
+    <link
+      rel="preload"
+      href="/assets/studio_small_08_1k.hdr"
+      as="fetch"
+      type="application/octet-stream"
+      crossorigin
+    />
+    <!--
+      Preload the hero background sky image – it is the first visible pixel
+      on screen so delaying it hurts LCP directly.
+    -->
+    <link
+      rel="preload"
+      href="/assets/sky.jpg"
+      as="image"
+      type="image/jpeg"
+    />
+    <!--
+      Preload the mountain parallax layer shown immediately on page load.
+    -->
+    <link
+      rel="preload"
+      href="/assets/mountain-3.png"
+      as="image"
+      type="image/png"
+    />
+
+    <!-- ── Phase 4: JSON-LD Structured Data ─────────────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Chirag Jain",
+      "url": "https://chiragjain.dev",
+      "image": "https://chiragjain.dev/assets/coding-pov.png",
+      "jobTitle": "Full-Stack Software Developer",
+      "description": "Full-Stack developer specialising in React, Three.js, WebGL, and .NET. Building modern, immersive 3D web experiences.",
+      "sameAs": [
+        "https://github.com/chiragjain",
+        "https://www.linkedin.com/in/chiragjain",
+        "https://www.instagram.com/chirag.kachhara"
+      ],
+      "knowsAbout": [
+        "React", "Three.js", "WebGL", ".NET Core", "C#",
+        "JavaScript", "TypeScript", "Tailwind CSS", "Vite"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "University – Computer Science"
+      },
+      "email": "chiragjain.ck04@gmail.com",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance / Open to Opportunities"
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
