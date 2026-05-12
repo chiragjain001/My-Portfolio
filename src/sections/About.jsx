@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import Card from "../components/Card";
-import { Globe } from "../components/Globe";
+
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/FrameWorks";
 
@@ -17,12 +17,13 @@ const About = () => {
             src="assets/coding-pov.png"
             alt=""
             aria-hidden="true"
-            className="absolute scale-[1.2] sm:scale-[1.75] -right-[2rem] sm:-right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5] opacity-50 sm:opacity-100"
+            className="absolute inset-0 w-full h-full object-cover opacity-50 sm:opacity-100 scale-[1.6] sm:scale-100"
+            style={{ objectFit: 'cover' }}
           />
           <div className="z-10">
             <p className="text-lg sm:text-xl mt-2 mb-2">Hi, I’m Chirag Jain — Full-Stack Developer & AI Engineer.</p>
             <p className="subtext">
-              I build scalable web applications and AI-powered products with a strong focus on performance, clean architecture, and modern user experiences. Passionate about transforming complex ideas into impactful digital solutions using React, Next.js, Node.js, Python, FastAPI, and LLM technologies.
+              I build scalable web applications and AI-powered products with a strong focus on performance, clean architecture, and modern user experiences.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -67,16 +68,7 @@ const About = () => {
               text="Vector DBs"
               containerRef={grid2Container}
             />
-            <Card
-              style={{ rotate: "-15deg", top: "40%", right: "10%" }}
-              text="SSE Streaming"
-              containerRef={grid2Container}
-            />
-            <Card
-              style={{ rotate: "45deg", bottom: "5%", left: "30%" }}
-              text="Prompt Engineering"
-              containerRef={grid2Container}
-            />
+
             <Card
               style={{ rotate: "-60deg", top: "15%", right: "5%" }}
               text="LangChain"
@@ -120,15 +112,18 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid-black-color grid-3">
-          <div className="z-10 w-[70%] md:w-[60%] pointer-events-none">
-            <p className="headtext">Time Zone</p>
-            <p className="subtext">I'm based in Mars, and open to remote work worldwide</p>
+        <div className="grid-black-color grid-3 relative overflow-hidden">
+          <img 
+            src="assets/earth.jpg" 
+            alt="earth background" 
+            className="absolute inset-0 w-full h-full object-cover object-right opacity-80 -scale-x-100"
+            style={{ objectFit: 'cover' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent pointer-events-none" />
+          <div className="relative z-10 w-[70%] md:w-[60%] pointer-events-none">
+            <p className="headtext text-white drop-shadow-md">Time Zone</p>
+            <p className="subtext text-gray-300 drop-shadow-md">I'm based in Mars, and open to remote work worldwide</p>
           </div>
-
-          <figure className="absolute right-0 bottom-0 md:-right-[20%] md:-bottom-[20%] md:left-[30%] top-[40%] md:top-[10%] opacity-100">
-            <Globe />
-          </figure>
         </div>
 
         <div className="grid-special-color grid-4">

@@ -91,10 +91,11 @@ const Navbar = () => {
           <div className="flex items-center justify-between py-3">
             <a
               href="/"
-              className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
+              className="flex items-center gap-2 transition-opacity hover:opacity-80"
               aria-label="Chirag Jain – home"
             >
-              Chirag
+              <img src="/logo.png" alt="Chirag Logo" className="w-8 h-8 rounded-full object-cover shadow-sm" />
+              <span className="text-xl font-bold text-neutral-200 hidden sm:block">Chirag</span>
             </a>
 
             {/* Mobile hamburger */}

@@ -69,9 +69,9 @@ export default defineConfig({
         scope: "/",
         orientation: "portrait-primary",
         icons: [
-          { src: "/vite.svg", sizes: "any", type: "image/svg+xml" },
-          { src: "/vite.svg", sizes: "192x192", type: "image/png" },
-          { src: "/vite.svg", sizes: "512x512", type: "image/png" },
+          { src: "/logo.png", sizes: "any", type: "image/png" },
+          { src: "/logo.png", sizes: "192x192", type: "image/png" },
+          { src: "/logo.png", sizes: "512x512", type: "image/png" },
         ],
       },
     }),

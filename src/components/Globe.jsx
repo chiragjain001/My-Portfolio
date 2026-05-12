@@ -130,7 +130,7 @@ export function Globe({ className, config = {} }) {
         role="img"
         aria-label="Interactive 3D globe showing worldwide locations"
         className={twMerge(
-          'size-[30rem] opacity-0 transition-opacity duration-500 [contain:layout_paint_size]',
+          'w-full h-full max-w-[30rem] max-h-[30rem] m-auto opacity-0 transition-opacity duration-500 [contain:layout_paint_size] pointer-events-none sm:pointer-events-auto touch-none',
         )}
         onPointerDown={(e) => {
           pointerInteracting.current = e.clientX;
