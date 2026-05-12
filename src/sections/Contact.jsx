@@ -14,7 +14,6 @@
  */
 
 import { useState, useCallback, useRef } from 'react';
-import emailjs from '@emailjs/browser';
 import Alert from '../components/Alert';
 import { Particles } from '../components/Particles';
 
@@ -44,30 +43,22 @@ const Contact = () => {
   }, []);
 
   const handleSubmit = useCallback(
-    async (e) => {
+    (e) => {
       e.preventDefault();
       setIsLoading(true);
+
       try {
-        await emailjs.send(
-          'service_296ffmn',
-          'template_7t0ki0j',
-          {
-            from_name:  formData.name,
-            to_name:    'Chirag',
-            from_email: formData.email,
-            to_email:   'chiragjain.ck04@gmail.com',
-            message:    formData.message,
-          },
-          {
-            publicKey: 'ueHXbNrzAvo_LkBms',
-          }
-        );
+        const subject = `Portfolio Contact from ${formData.name}`;
+        const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+        
+        // Use the native mailto link to open the user's default email client
+        window.location.href = `mailto:chiragjain.ck04@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
         setFormData(INITIAL_FORM);
-        showAlertMessage('success', 'Your message has been sent!');
+        showAlertMessage('success', 'Opening your email client...');
       } catch (err) {
-        console.error('[Contact] EmailJS error:', err);
-        const errorMsg = err?.text ? `Error: ${err.text}` : 'Something went wrong. Please try again.';
-        showAlertMessage('danger', errorMsg);
+        console.error('[Contact] Mailto error:', err);
+        showAlertMessage('danger', 'Something went wrong. Please try again.');
       } finally {
         setIsLoading(false);
       }
