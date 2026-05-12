@@ -58,13 +58,16 @@ const Contact = () => {
             to_email:   'chiragjain.ck04@gmail.com',
             message:    formData.message,
           },
-          'ueHXbNrzAvo_LkBms',
+          {
+            publicKey: 'ueHXbNrzAvo_LkBms',
+          }
         );
         setFormData(INITIAL_FORM);
         showAlertMessage('success', 'Your message has been sent!');
       } catch (err) {
         console.error('[Contact] EmailJS error:', err);
-        showAlertMessage('danger', 'Something went wrong. Please try again.');
+        const errorMsg = err?.text ? `Error: ${err.text}` : 'Something went wrong. Please try again.';
+        showAlertMessage('danger', errorMsg);
       } finally {
         setIsLoading(false);
       }
