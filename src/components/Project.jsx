@@ -96,7 +96,7 @@ const Project = ({
           disabled={!href}
           style={{ opacity: !href ? 0.3 : 1 }}
         >
-          <span className="text-sm uppercase tracking-widest font-semibold group-hover/btn:text-white transition-colors">Read More</span>
+          <span className="text-sm uppercase tracking-widest font-semibold group-hover/btn:text-white transition-colors">View</span>
           <img src="assets/arrow-right.svg" className="w-4 opacity-70 group-hover/btn:opacity-100 transition-opacity" alt="" />
         </motion.button>
       </div>

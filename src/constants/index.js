@@ -84,7 +84,7 @@ export const myProjects = [
       "Integrated Tailwind CSS for modern styling and UI enhancements.",
       "Optimized cross-browser performance and implemented lazy-loaded Draco-compressed WebGL models.",
     ],
-    href: "https://github.com/chiragjain001/My-Portfolio",
+    href: "https://chirag-portfolio-001.vercel.app/",
     logo: "",
     image: "/assets/projects/portfolio-image.png",
     tags: [
