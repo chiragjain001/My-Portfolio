@@ -21,7 +21,7 @@ export const myProjects = [
   },
   {
     id: 2,
-    title: "Mindsync",
+    title: "DailyRhythms",
     description:
       "A full-featured social platform supporting text posts, voice uploads, likes, comments, and user interactions.",
     subDescription: [
@@ -29,7 +29,7 @@ export const myProjects = [
       "Optimised data fetching strategies and responsive UI, improving load time and user retention.",
       "Integrated Firebase for seamless real-time backend updates.",
     ],
-    href: "https://mindsync-five.vercel.app/",
+    href: "https://dailyrhythms.vercel.app/",
     logo: "",
     image: "/assets/projects/mindsync-image.png",
     tags: [
@@ -130,7 +130,7 @@ export const experiences = [
     date: "2024 - Present",
     contents: [
       "Engineered the Jinsetu AI Platform utilizing RAG pipelines, Supabase, Gemini API, and FastAPI.",
-      "Built MindSync, a full-featured social platform supporting authentication, real-time sync, and media uploads.",
+      "Built DailyRhythms, a full-featured social platform supporting authentication, real-time sync, and media uploads.",
       "Developed PixHunt, an image discovery platform with modern cinematic UI and framer motion animations.",
       "Mastered Next.js, Node.js, and LLM-based architectures including vector databases.",
     ],
